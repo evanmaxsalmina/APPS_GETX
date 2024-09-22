@@ -21,10 +21,10 @@ class HomePage extends StatelessWidget {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: bottomNavCtr.selectedIndex.value,
           onTap: bottomNavCtr.changeIndexMenu,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black87,
           type: BottomNavigationBarType.fixed,
-          elevation: 10, // Adds shadow
-          selectedItemColor: Colors.blueAccent,
+          elevation: 10, 
+          selectedItemColor: Colors.redAccent,
           unselectedItemColor: Colors.grey,
           selectedIconTheme: IconThemeData(size: 30),
           unselectedIconTheme: IconThemeData(size: 25),

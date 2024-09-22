@@ -7,14 +7,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Login"),
-        centerTitle: true,
-        backgroundColor: Colors.blueAccent,
-        elevation: 0,
-      ),
       body: Container(
-        color: Colors.black87, // Ubah background body menjadi warna gelap
+        color: Colors.black87,
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -32,16 +26,16 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // Ubah warna teks agar terlihat di background gelap
+                    color: Colors.white, 
                   ),
                 ),
                 const SizedBox(height: 10),
                 const Text(
                   "Explore thousands of movies from various genres and eras.",
-                  textAlign: TextAlign.center, // Teks dibuat center
+                  textAlign: TextAlign.center, 
                   style: TextStyle(
                     fontSize: 13,
-                    color: Colors.white70, // Ubah warna teks agar lebih kontras
+                    color: Colors.white70, 
                   ),
                 ),
                 const SizedBox(height: 40),

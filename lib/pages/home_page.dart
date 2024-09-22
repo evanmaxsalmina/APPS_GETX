@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: bottomNavCtr.selectedIndex.value,
           onTap: bottomNavCtr.changeIndexMenu,
-          backgroundColor: Colors.black87,
+          backgroundColor: Color.fromARGB(255, 28, 21, 36),
           type: BottomNavigationBarType.fixed,
           elevation: 10, 
           selectedItemColor: Colors.redAccent,
@@ -35,9 +35,9 @@ class HomePage extends StatelessWidget {
           showUnselectedLabels: true,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined), label: "Home"),
+                icon: Icon(Icons.home_rounded), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.trending_up), label: "Trends"),
+                icon: Icon(Icons.local_fire_department), label: "Trends"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.category), label: "Category"),
             BottomNavigationBarItem(

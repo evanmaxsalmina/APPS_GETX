@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:apps_getx/widget/genre.dart';
+import 'package:apps_getx/widget/search.dart';
+import 'package:apps_getx/widget/card_ctgry.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
@@ -12,26 +15,7 @@ class Categories extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 60),
-              Container(
-                width: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(100)),
-                  color: Colors.white10,
-                ),
-                child: Row(
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.search, color: Colors.white),
-                      onPressed: () {
-                        print('Search button pressed');
-                      },
-                    ),
-                    SizedBox(width: 10),
-                    Text("Search Movies",
-                        style: TextStyle(color: Colors.white)),
-                  ],
-                ),
-              ),
+              Search(),
               SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.only(right: 220),
@@ -45,20 +29,13 @@ class Categories extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                width: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Colors.white10,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text("Action", style: TextStyle(color: Colors.white)),
-                    Text("Comedy", style: TextStyle(color: Colors.white)),
-                    Text("Romance", style: TextStyle(color: Colors.white)),
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GenreBox(genre: "Action"),
+                  GenreBox(genre: "Comedy"),
+                  GenreBox(genre: "Romance"),
+                ],
               ),
               SizedBox(height: 40),
               Padding(
@@ -76,42 +53,11 @@ class Categories extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      Container(
-                        width: 140,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                              20),
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/civil.jpeg'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      Text("Civil War", style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        width: 140,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                              20),
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/ugliest.jpg'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      Text("Uglies", style: TextStyle(color: Colors.white)),
-                    ],
-                  ),
+                  CardMovie(
+                      title: "Civil War",
+                      imagePath: 'assets/images/civil.jpeg'),
+                  CardMovie(
+                      title: "Uglies", imagePath: 'assets/images/ugliest.jpg'),
                 ],
               )
             ],

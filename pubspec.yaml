@@ -63,6 +63,11 @@ flutter:
     - assets/images/ugliest.jpg
     - assets/images/nemo.jpeg
     - assets/images/titanic.jpg
+    - assets/images/sao.jpg
+    - assets/images/horimiya.jpg
+    - assets/images/codegeass.jpeg
+    - assets/images/onepiece.jpg
+    - assets/images/ngnl.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -67,7 +67,7 @@ class Profile extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Add more watchlist items here
+                
               ],
             ),
           ],

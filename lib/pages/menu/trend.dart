@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:apps_getx/widget/trend_item.dart';
+import 'package:apps_getx/controller/trend_ctr.dart';
 
-class Trend extends StatefulWidget {
-  const Trend({super.key});
-
-  @override
-  State<Trend> createState() => _TrendState();
-}
-
-class _TrendState extends State<Trend> {
-  bool _isMovie = true;
+class Trend extends StatelessWidget {
+  final TrendController _trendController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -24,31 +19,23 @@ class _TrendState extends State<Trend> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: _isMovie ? Colors.black12 : Colors.white10,
+                    backgroundColor: _trendController.isMovie.value ? Colors.black12 : Colors.white10,
                   ),
                   child: Text("Movie", style: TextStyle(color: Colors.white)),
-                  onPressed: () {
-                    setState(() {
-                      _isMovie = true;
-                    });
-                  },
+                  onPressed: _trendController.toggleCategory,
                 ),
                 SizedBox(width: 20),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: _isMovie ? Colors.white10 : Colors.black12,
+                    backgroundColor: _trendController.isMovie.value ? Colors.white10 : Colors.black12,
                   ),
                   child: Text("Anime", style: TextStyle(color: Colors.white)),
-                  onPressed: () {
-                    setState(() {
-                      _isMovie = false;
-                    });
-                  },
+                  onPressed: _trendController.toggleCategory,
                 ),
               ],
             ),
             SizedBox(height: 20),
-            _isMovie
+            Obx(() => _trendController.isMovie.value
                 ? Column(
                     children: [
                       TrendItem(
@@ -124,7 +111,7 @@ class _TrendState extends State<Trend> {
                         imagePath: "assets/images/ngnl.jpg",
                       ),
                     ],
-                  ),
+                  )),
           ],
         ),
       ),

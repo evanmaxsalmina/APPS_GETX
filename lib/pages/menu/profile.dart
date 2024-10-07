@@ -1,76 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:apps_getx/widget/reused_p.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 28, 21, 36),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Profile picture
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: NetworkImage('https://via.placeholder.com/150'),
-            ),
-            SizedBox(height: 20),
-            // Username
-            Text(
-              'Username : Dapara',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            SizedBox(height: 10),
-            // Bio
-            Text(
-              'Bio : YUNG IYUNG IYUNG',
-              style: TextStyle(fontSize: 18, color: Colors.white),
-            ),
-            SizedBox(height: 20),
-            // Watchlist
-            Text(
-              'Watchlist:',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            SizedBox(height: 10),
-            // Watchlist items
-            GridView.count(
-              crossAxisCount: 2,
-              childAspectRatio: 3 / 2,
-              shrinkWrap: true,
-              children: <Widget>[
-                // Watchlist item 1
-                Card(
-                  child: Column(
-                    children: <Widget>[
-                      // Image.network('https://via.placeholder.com/150'),
-                      Text('Movie 1'),
-                    ],
-                  ),
-                ),
-                // Watchlist item 2
-                Card(
-                  child: Column(
-                    children: <Widget>[
-                      // Image.network('https://via.placeholder.com/150'),
-                      Text('Movie 2'),
-                    ],
-                  ),
-                ),
-                // Watchlist item 3
-                Card(
-                  child: Column(
-                    children: <Widget>[
-                      // Image.network('https://via.placeholder.com/150'),
-                      Text('Movie 3'),
-                    ],
-                  ),
-                ),
-                
-              ],
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ProfilePicture(imageUrl: 'assets/images/spiderman.jpg'),
+              SizedBox(height: 20),
+              ProfileInfo(username: 'Dapara', bio: 'YUNG IYUNG IYUNG'),
+              SizedBox(height: 20),
+              Text(
+                'Watchlist:',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              SizedBox(height: 10),
+              GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 2,
+                childAspectRatio: 1,
+                children: [
+                  Image.asset('assets/images/spiderman.jpg', width: 120, height: 120),
+                  Image.asset('assets/images/spiderman.jpg', width: 120, height: 120),
+                  Image.asset('assets/images/spiderman.jpg', width: 120, height: 120),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:apps_getx/controller/login_ctr.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  final LoginController _loginController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +41,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 ElevatedButton(
-                  onPressed: () {
-                    Get.toNamed('/homepage');
-                  },
+                  onPressed: _loginController.navigateToHomePage,
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                     backgroundColor: Colors.blueAccent,

@@ -29,13 +29,23 @@ class Categories extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GenreBox(genre: "Action"),
-                  GenreBox(genre: "Comedy"),
-                  GenreBox(genre: "Romance"),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    GenreBox(genre: "Action"),
+                    SizedBox(width: 20), 
+                    GenreBox(genre: "Comedy"),
+                    SizedBox(width: 20),
+                    GenreBox(genre: "Romance"),
+                    SizedBox(width: 20),
+                    GenreBox(genre: "Drama"),
+                    SizedBox(width: 20),
+                    GenreBox(genre: "Thriller"),
+                    SizedBox(width: 20),
+                    GenreBox(genre: "Horror"),
+                  ],
+                ),
               ),
               SizedBox(height: 40),
               Padding(
@@ -50,15 +60,26 @@ class Categories extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CardMovie(
-                      title: "Civil War",
-                      imagePath: 'assets/images/civil.jpeg'),
-                  CardMovie(
-                      title: "Uglies", imagePath: 'assets/images/ugliest.jpg'),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    CardMovie(
+                        title: "Civil War",
+                        imagePath: 'assets/images/civil.jpeg'),
+                    SizedBox(width: 20), 
+                    CardMovie(
+                        title: "Uglies", imagePath: 'assets/images/ugliest.jpg'),
+                    SizedBox(width: 20),
+                    CardMovie(
+                        title: "Avengers", imagePath: 'assets/images/avengers.jpeg'),
+                    SizedBox(width: 20),
+                    CardMovie(
+                        title: "Popeye",
+                        imagePath: 'assets/images/popeye.jpg'),
+                    
+                  ],
+                ),
               )
             ],
           ),

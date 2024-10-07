@@ -68,6 +68,8 @@ flutter:
     - assets/images/codegeass.jpeg
     - assets/images/onepiece.jpg
     - assets/images/ngnl.jpg
+    - assets/images/avengers.jpeg
+    - assets/images/popeye.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -1,3 +1,4 @@
+import 'package:apps_getx/pages/menu/favourite.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:apps_getx/pages/home_page.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       getPages: [
         GetPage(
@@ -39,6 +41,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/profile',
           page: () => Profile(),
+        ),
+        GetPage(
+          name: '/favourite',
+          page: () => Favourite(),
         ),
       ],
     );

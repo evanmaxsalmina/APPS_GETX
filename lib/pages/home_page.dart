@@ -5,6 +5,7 @@ import 'package:apps_getx/pages/menu/categories.dart';
 import 'package:apps_getx/pages/menu/home.dart';
 import 'package:apps_getx/pages/menu/profile.dart';
 import 'package:apps_getx/pages/menu/trend.dart';
+import 'package:apps_getx/pages/menu/favourite.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,7 +14,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final BottomNavCtr bottomNavCtr = Get.put(BottomNavCtr());
 
-    final List<Widget> menus = [Home(), Trend(), Categories(), Profile()];
+    final List<Widget> menus = [
+      Home(),
+      Trend(),
+      Categories(),
+      Profile(),
+      Favourite()
+    ];
 
     return Obx(() {
       return Scaffold(
@@ -23,7 +30,7 @@ class HomePage extends StatelessWidget {
           onTap: bottomNavCtr.changeIndexMenu,
           backgroundColor: Color.fromARGB(255, 28, 21, 36),
           type: BottomNavigationBarType.fixed,
-          elevation: 10, 
+          elevation: 10,
           selectedItemColor: Colors.redAccent,
           unselectedItemColor: Colors.grey,
           selectedIconTheme: IconThemeData(size: 30),
@@ -42,6 +49,8 @@ class HomePage extends StatelessWidget {
                 icon: Icon(Icons.category), label: "Category"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_2_outlined), label: "Profile"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.bookmark), label: "Favorite")
           ],
         ),
       );

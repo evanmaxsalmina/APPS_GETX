@@ -17,21 +17,21 @@ class Trend extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
+                Obx(() => ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: _trendController.isMovie.value ? Colors.black12 : Colors.white10,
+                    backgroundColor: _trendController.isMovie.value ? Colors.grey : Colors.black87,
                   ),
                   child: Text("Movie", style: TextStyle(color: Colors.white)),
                   onPressed: _trendController.toggleCategory,
-                ),
+                )),
                 SizedBox(width: 20),
-                ElevatedButton(
+                Obx(() => ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: _trendController.isMovie.value ? Colors.white10 : Colors.black12,
+                    backgroundColor: _trendController.isMovie.value ? Colors.black87 : Colors.grey,
                   ),
                   child: Text("Anime", style: TextStyle(color: Colors.white)),
                   onPressed: _trendController.toggleCategory,
-                ),
+                )),
               ],
             ),
             SizedBox(height: 20),
@@ -105,7 +105,7 @@ class Trend extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       TrendItem(
-                        ranking : "#5",
+                        ranking: "#5",
                         title: "No Game No Life",
                         rating: "9.5/10",
                         imagePath: "assets/images/ngnl.jpg",

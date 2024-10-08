@@ -13,7 +13,8 @@ class Profile extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ProfilePicture(imageUrl: 'assets/images/spiderman.jpg'),
+              SizedBox(height: 60),
+              ProfilePicture(imageUrl: 'assets/images/profile.png'),
               SizedBox(height: 20),
               ProfileInfo(username: 'Dapara', bio: 'YUNG IYUNG IYUNG'),
               SizedBox(height: 20),
@@ -29,7 +30,7 @@ class Profile extends StatelessWidget {
                 children: [
                   Image.asset('assets/images/spiderman.jpg', width: 120, height: 120),
                   Image.asset('assets/images/spiderman.jpg', width: 120, height: 120),
-                  Image.asset('assets/images/spiderman.jpg', width: 120, height: 120),
+                  
                 ],
               ),
             ],

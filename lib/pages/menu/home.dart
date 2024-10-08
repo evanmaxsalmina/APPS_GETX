@@ -1,5 +1,15 @@
-import 'package:apps_getx/widget/image.dart';
+import 'package:apps_getx/detail/codegeass.dart';
+import 'package:apps_getx/detail/deadpool.dart';
+import 'package:apps_getx/detail/homealone.dart';
+import 'package:apps_getx/detail/horimiya.dart';
+import 'package:apps_getx/detail/nemo.dart';
+import 'package:apps_getx/detail/ngnl.dart';
+import 'package:apps_getx/detail/sao.dart';
+import 'package:apps_getx/detail/titanic.dart';
+import 'package:apps_getx/detail/wanpis.dart';
 import 'package:apps_getx/widget/moviecard.dart';
+import 'package:apps_getx/widget/image.dart';
+import 'package:apps_getx/detail/harrypotter.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -47,6 +57,13 @@ class Home extends StatelessWidget {
                     'Finding Nemo',
                     'Titanic',
                   ],
+                  routes: [
+                    HarryPotter(),
+                    HomeAlone(),
+                    Deadpool(),
+                    Nemo(),
+                    Titanic()
+                  ],
                 ),
                 SizedBox(height: 30),
                 Padding(
@@ -75,6 +92,15 @@ class Home extends StatelessWidget {
                     'SAO',
                     'Code Geass',
                     'No Game No Life'
+                  ],
+                  routes: [
+                    Wanpis(),
+                    Horimiya(),
+                    Sao(),
+                    CodeGeass(),
+                    Ngnl()
+
+                    
                   ],
                 ),
               ],
